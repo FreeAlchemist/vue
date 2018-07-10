@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue</title>
+	<meta charset="UTF-8"/>
+	<!-- <link rel="stylesheet" type="text/css" href="css/timer.css"> -->
+</head>
+<body>
+<div id="app">
+	{{message}}
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Наведи курсор на меня пару секунд,
+    чтобы увидеть динамически связанное значение title!
+  </span>
+</div>
+
+<div id="app-3">
+  <span v-if="seen">Сейчас меня видно</span>
+</div>
+
+<div id="app-4">
+  <ol>
+  	{{message}}
+    <li v-for="todo in todos" v-bind:style="{ color: todo.color}">
+      {{todo.text}}
+    </li>
+  </ol>
+</div>
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+</div>
+
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+<script type="text/javascript" src="script/vue.js"></script>
+<script type="text/javascript" src="script/app.js"></script>
+</body>
+</html>
